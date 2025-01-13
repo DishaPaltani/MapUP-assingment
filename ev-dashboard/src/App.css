@@ -1,0 +1,87 @@
+/* General styles */
+.App {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.chart-container {
+  flex: 1;
+  min-width: 500px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.vehicle-table-container {
+  flex: 1;
+  min-width: 500px;
+  max-width: 100%; /* Prevents table from exceeding container width */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-x: auto; /* Make the table horizontally scrollable */
+}
+
+.vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-table th,
+.vehicle-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.vehicle-table th {
+  background-color: #3498db;
+  color: white;
+}
+
+.vehicle-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.vehicle-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    margin: 0 5%;
+  }
+
+  .chart-container,
+  .vehicle-table-container {
+    min-width: 100%;
+  }
+
+  .vehicle-table th, .vehicle-table td {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
